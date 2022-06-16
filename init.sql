@@ -36,3 +36,12 @@ CREATE TABLE IF NOT EXISTS movie_theater_admin(
 	CONSTRAINT FK_admin_id FOREIGN KEY (admin_id) REFERENCES admin(id) ON DELETE CASCADE,
 	CONSTRAINT FK_movie_theater FOREIGN KEY (movie_theater_id) REFERENCES movie_theater(id)
 ) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS movie_room(
+	id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    movie_room_number INT(1) NOT NULL,
+    seats INT(3) NOT NULL,
+    movie_theater_id INT(11) NOT NULL,
+    CONSTRAINT FK_movie_theater_admin FOREIGN KEY (movie_theater_id) REFERENCES movie_theater(id)
+) ENGINE=InnoDB;
+
