@@ -47,25 +47,25 @@ CREATE TABLE IF NOT EXISTS movie_room(
 
 CREATE TABLE IF NOT EXISTS movie (
 	id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    name VARCHAR(100),
-    synopsis TEXT,
-    running_time INT(3),
-    genre VARCHAR(20),
-    rating VARCHAR(20)
+	name VARCHAR(100),
+	synopsis TEXT,
+	running_time INT(3),
+	genre VARCHAR(20),
+	rating VARCHAR(20)
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS movie_session (
 	id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    date DATE,
-    time TIME,
-    movie_id INT(11),
-    CONSTRAINT FK_movie_id FOREIGN KEY (movie_id) REFERENCES movie(id)
+	date DATE,
+	time TIME,
+	movie_id INT(11),
+	CONSTRAINT FK_movie_id FOREIGN KEY (movie_id) REFERENCES movie(id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS movie_room_session (
 	movie_room_id INT(11) NOT NULL,
-    movie_session_id INT(11) NOT NULL,
-    PRIMARY KEY (movie_room_id, movie_session_id),
-    CONSTRAINT FK_movie_room_id FOREIGN KEY (movie_room_id) REFERENCES movie_room(id) ON DELETE CASCADE,
-    CONSTRAINT FK_movie_session_id FOREIGN KEY (movie_session_id) REFERENCES movie_session(id)
+	movie_session_id INT(11) NOT NULL,
+	PRIMARY KEY (movie_room_id, movie_session_id),
+	CONSTRAINT FK_movie_room_id FOREIGN KEY (movie_room_id) REFERENCES movie_room(id) ON DELETE CASCADE,
+	CONSTRAINT FK_movie_session_id FOREIGN KEY (movie_session_id) REFERENCES movie_session(id)
 ) ENGINE=InnoDB;
