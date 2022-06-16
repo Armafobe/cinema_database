@@ -1,11 +1,15 @@
 -- Installer MYSQL Server, Router, Workbench & Shell
 -- Ouvrir MySQL Workbench
 
--- Créer la base de données
+-- Création la base de données en encodage utf8
 
 CREATE DATABASE IF NOT EXISTS cinema_booking CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
+-- Précision d'utiliser la base de données cinema_booking précédemment créée
+
 USE cinema_booking;
+
+-- Création des tables
 
 CREATE TABLE IF NOT EXISTS admin(
 	id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
