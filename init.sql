@@ -47,17 +47,17 @@ CREATE TABLE IF NOT EXISTS movie_room(
 
 CREATE TABLE IF NOT EXISTS movie (
 	id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	name VARCHAR(100),
-	synopsis TEXT,
-	running_time INT(3),
+	name VARCHAR(100) NOT NULL,
+	synopsis TEXT NOT NULL,
+	running_time INT(3) NOT NULL,
 	genre VARCHAR(20),
 	rating VARCHAR(20)
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS movie_session (
 	id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	date DATE,
-	time TIME,
+	date DATE NOT NULL,
+	time TIME NOT NULL,
 	movie_id INT(11),
 	CONSTRAINT FK_movie_id FOREIGN KEY (movie_id) REFERENCES movie(id)
 ) ENGINE=InnoDB;
