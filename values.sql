@@ -194,3 +194,15 @@ INSERT INTO payment (type, price) VALUES
 ('Plein tarif', 9.20),
 ('Étudiant', 7.60),
 ('Moins de 14 ans', 5.90);
+
+INSERT INTO customer (lastname, firstname, username, password) VALUES
+('Jewitt', 'Linus', 'ljewitt0', '$2y$10$EoR8M7nlNuw0ExoTOnLEje1IlthtIA6aj0eLlJ4MKtm9ueXhUr7fe'),
+('Gammade', 'Carola', 'cgammade1', '$2y$10$Jjv4simlpHgjWjYpmoyzQurf8KLDYQZNWu6RsWp1h8Q3kBGEdjcQS'),
+('Baudouin', 'Jocko', 'jbaudouin2', '$2y$10$lVOiveBsFmP3SJDQ11VZPe6qukyHd3BeYa0No3iOTfIO5aGbN1Que'),
+('Rome', 'Shelbi', 'srome3', '$2y$10$tyGubz8v9Wl4v82d5qPFdODsDy00htxRTk15zAy72ZkvL5eWzpUhe'),
+('De Roos', 'Roderick', 'rderoos4', '$2y$10$vmZpcRrmw9/p4dngzlBuyeprcGfCqq..BzfI1hLLLtyoFWqZ4chjS'),
+('Rown', 'Judah', 'jrown5', '$2y$10$U1VNobqCpNBhOJRvmjmYuu6zyFF6Ke28pTAi3xjPJ0t0AoHo29QI6'),
+('Conti', 'Niel', 'nconti6', '$2y$10$S1lMh/p4LiMjJ6ZF0GVXrucVSbVP80/eLbYjS8TJL7E24fuRZPKhK'),
+('Carling', 'Rozanne', 'rcarling7', '$2y$10$gO6qKKwe.7SOVZx7o1kLROToXe7Jyb3EF7V/yJWaETXwaQrdYHb8G'),
+('Slate', 'Diana', 'dslate8', '$2y$10$HedzGdf5EfCed.2pbyQHIud3bSW8IW6HNA6pdIHYtlZpII9eZQLqG'),
+('Jacobowitz', 'Rolfe', 'rjacobowitz9', '$2y$10$U9ktYZbYFfJp4lM7jhQsoeTZXUu6xUw.d1azpgC1n8l0GITFQPhtq');
