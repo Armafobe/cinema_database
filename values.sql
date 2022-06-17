@@ -189,3 +189,8 @@ INSERT INTO movie_room_session (movie_session_id, movie_room_id) VALUES
 (9, 11),
 (10, 30),
 (2, 9);
+
+INSERT INTO payment (type, price) VALUES
+('Plein tarif', 9.20),
+('Étudiant', 7.60),
+('Moins de 14 ans', 5.90);
