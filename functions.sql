@@ -18,4 +18,21 @@ JOIN movie_session ON booking.movie_session_id_booking = movie_session.id
 JOIN customer ON booking.customer_id = customer.id
 ORDER BY date;
 
--- 
+-- Vérification du nombre de place restantes pour chaque séance en fonction du cinéma, du film et du numéro de salle
+
+SELECT 
+	movie_theater.name 'Cinéma',
+	movie.name 'Film',
+	movie_room.movie_room_number 'Numéro de salle',
+    concat(movie_session.date, ' ', movie_session.time) 'Séance',
+	movie_room.seats 'Places au total',
+	count(booking.movie_session_id_booking) 'Réservations',
+	movie_room.seats - count(booking.movie_session_id_booking) 'Places restantes'
+FROM booking
+JOIN movie_room_session
+JOIN movie_session ON movie_room_session.movie_session_id = movie_session.id
+JOIN movie ON movie_session.movie_id = movie.id
+JOIN movie_room ON movie_room_session.movie_room_id = movie_room.id
+JOIN movie_theater ON movie_room.movie_theater_id = movie_theater.id
+GROUP BY movie_session_id
+ORDER BY date;
