@@ -207,14 +207,14 @@ INSERT INTO customer (lastname, firstname, username, password) VALUES
 ('Slate', 'Diana', 'dslate8', '$2y$10$HedzGdf5EfCed.2pbyQHIud3bSW8IW6HNA6pdIHYtlZpII9eZQLqG'),
 ('Jacobowitz', 'Rolfe', 'rjacobowitz9', '$2y$10$U9ktYZbYFfJp4lM7jhQsoeTZXUu6xUw.d1azpgC1n8l0GITFQPhtq');
 
-INSERT INTO booking (booking_date, payment_type, payment_date, movie_session_id_booking, payment_id, customer_id) VALUES
-('2022-06-21 20:30', 'En ligne', '2022-06-20 16:42', 3, 2, 3),
-('2022-06-27 13:00', 'Sur place', '2022-06-27 12:36', 21, 1, 1),
-('2022-06-22 11:30', 'Sur place', '2022-06-22 10:10', 25, 1, 6),
-('2022-06-19 15:30', 'En ligne', '2022-06-15 12:04', 30, 3, 5),
-('2022-06-26 20:30', 'Sur place', '2022-06-26 20:08', 4, 2, 7),
-('2022-06-28 16:45', 'En ligne', '2022-06-24 08:47', 9, 3, 10),
-('2022-06-20 15:30', 'Sur place', '2022-06-19 16:43', 22, 1, 9),
-('2022-06-20 16:00', 'Sur place', '2022-06-20 15:13', 13, 2, 4),
-('2022-06-25 12:15', 'En ligne', '2022-06-25 07:34', 7, 1, 8),
-('2022-07-01 19:00', 'En ligne', '2022-06-29 20:21', 16, 3, 2);
+INSERT INTO booking (booking_date, payment_type, payment_date, movie_session_id_booking, movie_room_id_booking, payment_id, customer_id) VALUES
+('2022-06-21 20:30', 'En ligne', '2022-06-20 16:42', 3, 2, 10, 3),
+('2022-06-27 13:00', 'Sur place', '2022-06-27 12:36', 21, 1, 27, 1),
+('2022-06-22 11:30', 'Sur place', '2022-06-22 10:10', 25, 1, 2, 6),
+('2022-06-19 15:30', 'En ligne', '2022-06-15 12:04', 30, 3, 16, 5),
+('2022-06-26 20:30', 'Sur place', '2022-06-26 20:08', 4, 2, 31, 7),
+('2022-06-28 16:45', 'En ligne', '2022-06-24 08:47', 9, 3, 26, 10),
+('2022-06-20 15:30', 'Sur place', '2022-06-19 16:43', 22, 1, 13, 9),
+('2022-06-20 16:00', 'Sur place', '2022-06-20 15:13', 15, 2, 10, 4),
+('2022-06-25 12:15', 'En ligne', '2022-06-25 07:34', 7, 1, 16, 8),
+('2022-07-01 19:00', 'En ligne', '2022-06-29 20:21', 16, 3, 9, 2);
