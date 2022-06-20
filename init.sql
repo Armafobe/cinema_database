@@ -94,9 +94,11 @@ CREATE TABLE IF NOT EXISTS booking (
 	payment_type VARCHAR(20) NOT NULL,
 	payment_date DATETIME NOT NULL,
 	movie_session_id_booking INT(11) NOT NULL,
+	movie_room_id_booking INT(11) NOT NULL,
 	payment_id INT(11) NOT NULL,
 	customer_id INT(11) NOT NULL,
 	CONSTRAINT FK_movie_session_id_booking FOREIGN KEY (movie_session_id_booking) REFERENCES movie_session(id),
+	CONSTRAINT FK_movie_room_id_booking FOREIGN KEY (movie_room_id_booking) REFERENCES movie_room(id),
 	CONSTRAINT FK_payment_id FOREIGN KEY (payment_id) REFERENCES payment(id),
 	CONSTRAINT FK_customer_id FOREIGN KEY (customer_id) REFERENCES customer(id)
 ) ENGINE=InnoDB;
