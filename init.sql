@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS movie (
 	name VARCHAR(100) NOT NULL,
 	synopsis TEXT NOT NULL,
 	running_time INT(3) NOT NULL,
-	genre VARCHAR(60),
+	genre VARCHAR(60) NOT NULL,
 	rating VARCHAR(20)
 ) ENGINE=InnoDB;
 
