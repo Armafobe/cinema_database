@@ -1,5 +1,6 @@
--- Installer MYSQL Server, Router, Workbench & Shell
--- Ouvrir MySQL Workbench
+-- Connexion au serveur SQL
+
+mysql -h localhost:8889 -u root -p root
 
 -- Création la base de données en encodage utf8
 
