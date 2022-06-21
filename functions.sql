@@ -34,3 +34,15 @@ JOIN movie_room ON movie_session.movie_room_id = movie_room.id
 JOIN movie_theater ON movie_room.movie_theater_id = movie_theater.id
 GROUP BY movie_session_id
 ORDER BY date;
+
+-- Changer le film sans changer la séance dans une salle donnée, ou changer la salle d'une séance donnée mais avec le même film diffusé
+
+UPDATE movie_session
+SET movie_id = 6 || SET movie_room_id = 32 
+WHERE movie_room_id = 1; || WHERE date = '2022-07-01' AND time = '10:15:00'
+
+-- Permettre à un admin de changer son mot de passe 
+
+UPDATE admin
+SET password = '$2y$10$JgulVqdQ18AjnIV5p.SwvOzd2i9rRiNUdg/mrERkcrdPsp2BOP6pu'
+WHERE username = 'rdabels3';
